@@ -1,0 +1,14 @@
+@import "@material/elevation/mdc-elevation";
+@import "@material/top-app-bar/mdc-top-app-bar";
+
+mdc-top-app-bar {
+    background: white !important;
+}
+
+main {
+  margin-top: 56px;
+}
+
+#site-logo {
+  height: 160%;
+}

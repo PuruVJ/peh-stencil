@@ -10,8 +10,12 @@
     "test.watch": "stencil test --spec --e2e --watchAll"
   },
   "dependencies": {
-    "@stencil/core": "^1.2.1",
-    "@stencil/router": "^1.0.1"
+    "@material/elevation": "^3.1.0",
+    "@material/mwc-button": "^0.6.0",
+    "@material/mwc-top-app-bar": "^0.6.0",
+    "@stencil/core": "^1.2.2",
+    "@stencil/router": "^1.0.1",
+    "@stencil/sass": "^1.0.1"
   },
   "license": "MIT"
 }

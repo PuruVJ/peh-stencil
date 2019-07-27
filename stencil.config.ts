@@ -1,9 +1,10 @@
 import { Config } from '@stencil/core';
+import { sass } from "@stencil/sass";
 
 // https://stenciljs.com/docs/config
 
 export const config: Config = {
-  globalStyle: 'src/global/app.css',
+  globalStyle: 'src/global/app.scss',
   globalScript: 'src/global/app.ts',
   outputTargets: [
     {
@@ -12,5 +13,11 @@ export const config: Config = {
       serviceWorker: null,
       baseUrl: 'https://myapp.local/'
     }
+  ],
+  enableCache: false,
+  plugins: [
+    sass({
+      includePaths: ['./node_modules']
+    })
   ]
 };

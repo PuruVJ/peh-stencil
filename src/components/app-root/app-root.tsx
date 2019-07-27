@@ -1,9 +1,9 @@
 import { Component, h } from '@stencil/core';
-
+import "@material/mwc-top-app-bar";
 
 @Component({
   tag: 'app-root',
-  styleUrl: 'app-root.css',
+  styleUrl: 'app-root.scss',
   shadow: true
 })
 export class AppRoot {
@@ -11,17 +11,14 @@ export class AppRoot {
   render() {
     return (
       <div>
-        <header>
-          <h1>Stencil App Starter</h1>
-        </header>
+        <mwc-top-app-bar>
+
+          <img id="site-logo" slot="navigationIcon" src="../../assets/icon.png" />
+
+        </mwc-top-app-bar>
 
         <main>
-          <stencil-router>
-            <stencil-route-switch scrollTopOffset={0}>
-              <stencil-route url='/' component='app-home' exact={true} />
-              <stencil-route url='/profile/:name' component='app-profile' />
-            </stencil-route-switch>
-          </stencil-router>
+          <app-home></app-home>
         </main>
       </div>
     );

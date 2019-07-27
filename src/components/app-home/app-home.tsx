@@ -1,8 +1,9 @@
 import { Component, h } from '@stencil/core';
+import "@material/mwc-button";
 
 @Component({
   tag: 'app-home',
-  styleUrl: 'app-home.css',
+  styleUrl: 'app-home.scss',
   shadow: true
 })
 export class AppHome {
@@ -10,18 +11,7 @@ export class AppHome {
   render() {
     return (
       <div class='app-home'>
-        <p>
-          Welcome to the Stencil App Starter.
-          You can use this starter to build entire apps all with
-          web components using Stencil!
-          Check out our docs on <a href='https://stenciljs.com'>stenciljs.com</a> to get started.
-        </p>
-
-        <stencil-route-link url='/profile/stencil'>
-          <button>
-            Profile page
-          </button>
-        </stencil-route-link>
+        <img id="banner" src="../../assets/banner.jpg" />
       </div>
     );
   }
