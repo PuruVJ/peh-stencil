@@ -1,12 +1,12 @@
 @import "@material/elevation/mdc-elevation";
 @import "@material/top-app-bar/mdc-top-app-bar";
 
-mdc-top-app-bar {
-    background: white !important;
+.mdc-top-app-bar {
+    background: white;
 }
 
 main {
-  // margin-top: 56px;
+  //  margin-top: 1px;
 }
 
 #site-logo {

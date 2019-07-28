@@ -8,3 +8,19 @@
   height: auto;
 
 }
+
+.app-home {
+  display: grid;
+  justify-content: stretch;
+  align-items: stretch;
+  width: 100% !important;
+}
+
+.banner {
+  justify-self: stretch;
+}
+
+app-description {
+  display: flex;
+  justify-self: center;
+}

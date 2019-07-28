@@ -11,6 +11,9 @@ export class AppHome {
     return (
       <div class='app-home'>
         <img id="banner" src="../../assets/banner.jpg" />
+        <br/>
+        <br/>
+        <app-description></app-description>
       </div>
     );
   }
