@@ -1,5 +1,4 @@
 import { Component, h } from '@stencil/core';
-import "@material/mwc-button";
 
 @Component({
   tag: 'app-home',

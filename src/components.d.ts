@@ -6,37 +6,35 @@
 
 
 import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
-import {
-  MatchResults,
-} from '@stencil/router';
+
 
 export namespace Components {
-  interface AppHome {}
+  interface AppHome { }
   interface AppProfile {
-    'match': MatchResults;
+
   }
-  interface AppRoot {}
+  interface AppRoot { }
 }
 
 declare global {
 
 
-  interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {}
+  interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement { }
   var HTMLAppHomeElement: {
     prototype: HTMLAppHomeElement;
-    new (): HTMLAppHomeElement;
+    new(): HTMLAppHomeElement;
   };
 
-  interface HTMLAppProfileElement extends Components.AppProfile, HTMLStencilElement {}
+  interface HTMLAppProfileElement extends Components.AppProfile, HTMLStencilElement { }
   var HTMLAppProfileElement: {
     prototype: HTMLAppProfileElement;
-    new (): HTMLAppProfileElement;
+    new(): HTMLAppProfileElement;
   };
 
-  interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {}
+  interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement { }
   var HTMLAppRootElement: {
     prototype: HTMLAppRootElement;
-    new (): HTMLAppRootElement;
+    new(): HTMLAppRootElement;
   };
   interface HTMLElementTagNameMap {
     'app-home': HTMLAppHomeElement;
@@ -46,11 +44,11 @@ declare global {
 }
 
 declare namespace LocalJSX {
-  interface AppHome extends JSXBase.HTMLAttributes<HTMLAppHomeElement> {}
+  interface AppHome extends JSXBase.HTMLAttributes<HTMLAppHomeElement> { }
   interface AppProfile extends JSXBase.HTMLAttributes<HTMLAppProfileElement> {
     'match'?: MatchResults;
   }
-  interface AppRoot extends JSXBase.HTMLAttributes<HTMLAppRootElement> {}
+  interface AppRoot extends JSXBase.HTMLAttributes<HTMLAppRootElement> { }
 
   interface IntrinsicElements {
     'app-home': AppHome;
@@ -64,7 +62,7 @@ export { LocalJSX as JSX };
 
 declare module "@stencil/core" {
   export namespace JSX {
-    interface IntrinsicElements extends LocalJSX.IntrinsicElements {}
+    interface IntrinsicElements extends LocalJSX.IntrinsicElements { }
   }
 }
 
