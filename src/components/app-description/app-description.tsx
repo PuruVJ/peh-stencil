@@ -1,4 +1,4 @@
-import { Component, h } from "@stencil/core";
+import { Component, h, State } from "@stencil/core";
 
 @Component({
   tag: 'app-description',
@@ -6,6 +6,63 @@ import { Component, h } from "@stencil/core";
   shadow: true
 })
 export class AppDescription {
+  @State() data = [
+    {
+      cols: 2,
+      rows: 2,
+      background: "../assets/gallery/9.jpg"
+    },
+    {
+      cols: 1,
+      rows: 1,
+      background: "../assets/gallery/1.jpg"
+    },
+    {
+      cols: 1,
+      rows: 1,
+      background: "../assets/gallery/2.jpg"
+    },
+    {
+      cols: 1,
+      rows: 1,
+      background: "../assets/gallery/3.jpg"
+    },
+    {
+      cols: 1,
+      rows: 1,
+      background: "../assets/gallery/6.jpg"
+    },
+    {
+      cols: 1,
+      rows: 1,
+      background: "../assets/gallery/7.jpg"
+    },
+    {
+      cols: 1,
+      rows: 1,
+      background: "../assets/gallery/8.jpg"
+    },
+    {
+      cols: 1,
+      rows: 2,
+      background: "../assets/gallery/10.jpg"
+    },
+    {
+      cols: 1,
+      rows: 2,
+      background: "../assets/gallery/4.jpg"
+    },
+    {
+      cols: 1,
+      rows: 2,
+      background: "../assets/gallery/5.jpg"
+    },
+    {
+      cols: 2,
+      rows: 2,
+      background: "../assets/gallery/9.jpg"
+    }
+  ];
 
   render() {
 
@@ -34,9 +91,30 @@ export class AppDescription {
             Devoted services to the patients is USP of Dr Sandeep vijay & Puru Eye Hospital.
           </span>
         </div>
-        <br/>
-        
-        <h3>Address & Timings</h3>
+        <br />
+        <div class="divider"></div>
+
+        <div id="timing">
+          <h1>Addresses & Timings</h1>
+
+          <h3>Puru Eye Hospital, Mansarovar</h3>
+          Morning 9.00 a.m. to 10.45 a.m.<br />
+          Evening 4.00 p.m. to 5.30 p.m.<br />
+          Sunday- 09.00-11.30 (by appointment)
+          <br />
+          <h3>Puru Eye Hospital, Durgapura</h3>
+          Morning 11.15 a.m. to 1.30 p.m.<br />
+          Evening 6.00 p.m. to 8.00 p.m.<br />
+          Sunday - Closed
+        </div>
+        <br />
+        <div class="grid-container">
+          {this.data.map(img => {
+            return (
+              <img src={img.background} />
+            )
+          })}
+        </div>
       </div>
     )
   }
