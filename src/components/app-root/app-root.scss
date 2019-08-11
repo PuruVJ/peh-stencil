@@ -1,5 +1,6 @@
 @import "@material/elevation/mdc-elevation";
 @import "@material/top-app-bar/mdc-top-app-bar";
+@import "@material/icon-button/mdc-icon-button";
 
 .mdc-top-app-bar {
     background: white;
@@ -11,4 +12,18 @@ main {
 
 #site-logo {
   height: 160%;
+}
+
+@media only screen and (max-width: 500px) {
+  #site-logo {
+    height: 120%;
+  }
+}
+
+footer {
+  height: auto;
+  padding: 1%;
+  max-width: 100%;
+  background: #eee;
+  font-size: 1.4em;
 }

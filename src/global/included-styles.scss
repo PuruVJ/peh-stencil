@@ -1,0 +1,14 @@
+a:not(.icon-link) {
+  color: #585858;
+  text-decoration: none;
+  border-spacing: 4px;
+  border-bottom: 3px dotted #585858;
+  transition: all 0.5ms ease-in;
+
+  &:hover {
+    color: #000;
+    border-spacing: 4px;
+    border-bottom: 3px dotted #000;
+  }
+}
+

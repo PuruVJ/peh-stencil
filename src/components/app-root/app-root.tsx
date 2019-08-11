@@ -3,7 +3,10 @@ import { Component, h } from '@stencil/core';
 
 @Component({
   tag: 'app-root',
-  styleUrl: 'app-root.scss',
+  styleUrls: [
+    'app-root.scss',
+    '../../global/included-styles.scss'
+  ],
   shadow: true
 })
 export class AppRoot {
@@ -17,7 +20,16 @@ export class AppRoot {
               <img id="site-logo" src="../../assets/icon.png" />
             </section>
             <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
-
+              <a class="icon-link" href="tel:9414065020">
+                <button class="mdc-icon-button">
+                  <img src="../../assets/icon/outline-call.svg" />
+                </button>
+              </a>
+              <a class="icon-link" href="mailto:vijaydrsandeep@yahoo.co.in">
+                <button class="mdc-icon-button">
+                  <img src="../../assets/icon/outline-email.svg" />
+                </button>
+              </a>
             </section>
           </div>
         </header>
@@ -25,6 +37,11 @@ export class AppRoot {
         <main>
           <app-home></app-home>
         </main>
+
+
+        <footer >
+          Created by <a href="https://twitter.com/PuruVijay14">Puru Vijay</a>
+        </footer>
       </div>
     );
   }

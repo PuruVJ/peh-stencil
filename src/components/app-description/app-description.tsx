@@ -1,66 +1,137 @@
 import { Component, h, State } from "@stencil/core";
-
+import { Utilities } from "../../service";
 @Component({
   tag: 'app-description',
-  styleUrl: 'app-description.scss',
+  styleUrls: [
+    'app-description.scss',
+    '../../global/included-styles.scss'
+  ],
   shadow: true
 })
 export class AppDescription {
+  @State() mobileScreen = new Utilities().isMobileScreen;
+
   @State() data = [
     {
-      cols: 2,
-      rows: 2,
-      background: "../assets/gallery/9.jpg"
+      background: "../assets/gallery/9-large.jpg",
+      styles: {
+        gridColumn: '1/3',
+        gridRow: '1/3'
+      },
+      stylesMobile: {
+        gridColumn: '1 / span 1',
+        gridRow: '1 / span 1'
+      }
     },
     {
-      cols: 1,
-      rows: 1,
-      background: "../assets/gallery/1.jpg"
+      background: "../assets/gallery/1-large.jpg",
+      styles: {
+        gridColumn: '3 / span 1',
+        gridRow: '1 / span 1'
+      },
+      stylesMobile: {
+        gridColumn: '1 / span 1',
+        gridRow: '1 / span 1'
+      }
     },
     {
-      cols: 1,
-      rows: 1,
-      background: "../assets/gallery/2.jpg"
+      background: "../assets/gallery/2-large.jpg",
+      styles: {
+        gridColumn: '4 / span 1',
+        gridRow: '1 / span 1'
+      },
+      stylesMobile: {
+        gridColumn: '1 / span 1',
+        gridRow: '1 / span 1'
+      }
     },
     {
-      cols: 1,
-      rows: 1,
-      background: "../assets/gallery/3.jpg"
+      background: "../assets/gallery/3-large.jpg",
+      styles: {
+        gridColumn: '5 / span 1',
+        gridRow: '1 / span 1'
+      },
+      stylesMobile: {
+        gridColumn: '1 / span 1',
+        gridRow: '1 / span 1'
+      }
     },
     {
-      cols: 1,
-      rows: 1,
-      background: "../assets/gallery/6.jpg"
+      background: "../assets/gallery/6-large.jpg",
+      styles: {
+        gridColumn: '3 / span 1',
+        gridRow: '2 / span 1'
+      },
+      stylesMobile: {
+        gridColumn: '1 / span 1',
+        gridRow: '1 / span 1'
+      }
     },
     {
-      cols: 1,
-      rows: 1,
-      background: "../assets/gallery/7.jpg"
+      background: "../assets/gallery/7-large.jpg",
+      styles: {
+        gridColumn: '4 / span 1',
+        gridRow: '2 / span 1'
+      },
+      stylesMobile: {
+        gridColumn: '1 / span 1',
+        gridRow: '1 / span 1'
+      }
     },
     {
-      cols: 1,
-      rows: 1,
-      background: "../assets/gallery/8.jpg"
+      background: "../assets/gallery/8-large.jpg",
+      styles: {
+        gridColumn: '5 / span 1',
+        gridRow: '2 / span 1'
+      },
+      stylesMobile: {
+        gridColumn: '1 / span 1',
+        gridRow: '1 / span 1'
+      }
     },
     {
-      cols: 1,
-      rows: 2,
-      background: "../assets/gallery/10.jpg"
+
+      background: "../assets/gallery/10-large.jpg",
+      styles: {
+        gridColumn: '1 / span 1',
+        gridRow: '3 / span 2'
+      },
+      stylesMobile: {
+        gridColumn: '1 / span 1',
+        gridRow: '1 / span 1'
+      }
     },
     {
-      cols: 1,
-      rows: 2,
-      background: "../assets/gallery/4.jpg"
+
+      background: "../assets/gallery/4-large.jpg",
+      styles: {
+        gridColumn: '2 / span 1',
+        gridRow: '3 / span 2'
+      },
+      stylesMobile: {
+        gridColumn: '1 / span 1',
+        gridRow: '1 / span 1'
+      }
     },
     {
-      cols: 1,
-      rows: 2,
-      background: "../assets/gallery/5.jpg"
+
+      background: "../assets/gallery/5-large.jpg",
+      styles: {
+        gridColumn: '3 / span 1',
+        gridRow: '3 / span 2'
+      }
     },
     {
-      cols: 2,
-      rows: 2,
-      background: "../assets/gallery/9.jpg"
+
+      background: "../assets/gallery/9-large.jpg",
+      styles: {
+        gridColumn: '4 / span 2',
+        gridRow: '3 / span 2'
+      },
+      stylesMobile: {
+        gridColumn: '1 / span 1',
+        gridRow: '1 / span 1'
+      }
     }
   ];
 
@@ -68,7 +139,7 @@ export class AppDescription {
 
     return (
       <div class="app-description">
-        <h3>ABOUT</h3>
+        <h1>ABOUT</h1>
         <div class="description">
           <span>
             <b>Puru Eye Hospital, Lasik Laser & Phaco Surgery Centre</b> is a well recognized name in eye care services in Jaipur.
@@ -111,7 +182,9 @@ export class AppDescription {
         <div class="grid-container">
           {this.data.map(img => {
             return (
-              <img src={img.background} />
+              <figure style={img.styles} >
+                <img src={img.background} loading="lazy" style={this.mobileScreen ? img.styles : img.styles} />
+              </figure>
             )
           })}
         </div>
