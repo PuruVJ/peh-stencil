@@ -101,7 +101,7 @@ export class AppDescription {
                   <source type="image/webp" media="(max-width: 500px)" srcSet={`${img.background}small.webp`}></source>
                   <source type="image/jpg" media="(min-width: 501px)" srcSet={`${img.background}large.jpg`}></source>
                   <source type="image/jpg" media="(max-width: 500px)" srcSet={`${img.background}small.jpg`}></source>
-                  <img src={`${img.background}large.jpg`} loading="lazy" />
+                  <img alt={`PEH Gallery image ${index + 1}`} src={`${img.background}large.jpg`} loading="lazy" />
                 </picture>
               </figure>
             )

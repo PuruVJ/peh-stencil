@@ -11,10 +11,10 @@ export class AppHome {
     return (
       <div class='app-home'>
         <picture>
-          <source type="image/webp" media="(min-width: 501px)" srcSet=""></source>
-          <source type="image/webp" media="(max-width: 500px)" srcSet={`${img.background}small.webp`}></source>
-          <source type="image/jpg" media="(min-width: 501px)" srcSet={`${img.background}large.jpg`}></source>
-          <source type="image/jpg" media="(max-width: 500px)" srcSet={`${img.background}small.jpg`}></source>
+          <source type="image/webp" media="(min-width: 501px)" srcSet="../../assets/banner-large.webp"></source>
+          <source type="image/webp" media="(max-width: 500px)" srcSet="../../assets/banner-small.webp"></source>
+          <source type="image/jpg" media="(min-width: 501px)" srcSet="../../assets/banner-large.jpg"></source>
+          <source type="image/jpg" media="(max-width: 500px)" srcSet="../../assets/banner-small.jpg"></source>
           <img alt="Puru Eye Hospital front view" id="banner" src="../../assets/banner.jpg" />
         </picture>
         <br />
