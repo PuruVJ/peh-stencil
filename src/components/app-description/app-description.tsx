@@ -1,5 +1,4 @@
 import { Component, h, State } from "@stencil/core";
-import { Utilities } from "../../service";
 @Component({
   tag: 'app-description',
   styleUrls: [
@@ -9,129 +8,43 @@ import { Utilities } from "../../service";
   shadow: true
 })
 export class AppDescription {
-  @State() mobileScreen = new Utilities().isMobileScreen;
 
   @State() data = [
     {
-      background: "../assets/gallery/9-large.jpg",
-      styles: {
-        gridColumn: '1/3',
-        gridRow: '1/3'
-      },
-      stylesMobile: {
-        gridColumn: '1 / span 1',
-        gridRow: '1 / span 1'
-      }
+      background: "../assets/gallery/9-",
     },
     {
-      background: "../assets/gallery/1-large.jpg",
-      styles: {
-        gridColumn: '3 / span 1',
-        gridRow: '1 / span 1'
-      },
-      stylesMobile: {
-        gridColumn: '1 / span 1',
-        gridRow: '1 / span 1'
-      }
+      background: "../assets/gallery/1-",
     },
     {
-      background: "../assets/gallery/2-large.jpg",
-      styles: {
-        gridColumn: '4 / span 1',
-        gridRow: '1 / span 1'
-      },
-      stylesMobile: {
-        gridColumn: '1 / span 1',
-        gridRow: '1 / span 1'
-      }
+      background: "../assets/gallery/2-",
     },
     {
-      background: "../assets/gallery/3-large.jpg",
-      styles: {
-        gridColumn: '5 / span 1',
-        gridRow: '1 / span 1'
-      },
-      stylesMobile: {
-        gridColumn: '1 / span 1',
-        gridRow: '1 / span 1'
-      }
+      background: "../assets/gallery/3-",
     },
     {
-      background: "../assets/gallery/6-large.jpg",
-      styles: {
-        gridColumn: '3 / span 1',
-        gridRow: '2 / span 1'
-      },
-      stylesMobile: {
-        gridColumn: '1 / span 1',
-        gridRow: '1 / span 1'
-      }
+      background: "../assets/gallery/6-",
     },
     {
-      background: "../assets/gallery/7-large.jpg",
-      styles: {
-        gridColumn: '4 / span 1',
-        gridRow: '2 / span 1'
-      },
-      stylesMobile: {
-        gridColumn: '1 / span 1',
-        gridRow: '1 / span 1'
-      }
+      background: "../assets/gallery/7-",
     },
     {
-      background: "../assets/gallery/8-large.jpg",
-      styles: {
-        gridColumn: '5 / span 1',
-        gridRow: '2 / span 1'
-      },
-      stylesMobile: {
-        gridColumn: '1 / span 1',
-        gridRow: '1 / span 1'
-      }
+      background: "../assets/gallery/8-",
     },
     {
+      background: "../assets/gallery/10-",
 
-      background: "../assets/gallery/10-large.jpg",
-      styles: {
-        gridColumn: '1 / span 1',
-        gridRow: '3 / span 2'
-      },
-      stylesMobile: {
-        gridColumn: '1 / span 1',
-        gridRow: '1 / span 1'
-      }
     },
     {
+      background: "../assets/gallery/4-",
 
-      background: "../assets/gallery/4-large.jpg",
-      styles: {
-        gridColumn: '2 / span 1',
-        gridRow: '3 / span 2'
-      },
-      stylesMobile: {
-        gridColumn: '1 / span 1',
-        gridRow: '1 / span 1'
-      }
     },
     {
+      background: "../assets/gallery/5-",
 
-      background: "../assets/gallery/5-large.jpg",
-      styles: {
-        gridColumn: '3 / span 1',
-        gridRow: '3 / span 2'
-      }
     },
     {
-
-      background: "../assets/gallery/9-large.jpg",
-      styles: {
-        gridColumn: '4 / span 2',
-        gridRow: '3 / span 2'
-      },
-      stylesMobile: {
-        gridColumn: '1 / span 1',
-        gridRow: '1 / span 1'
-      }
+      background: "../assets/gallery/9-",
     }
   ];
 
@@ -175,15 +88,21 @@ export class AppDescription {
           <br />
           <h3>Puru Eye Hospital, Durgapura</h3>
           Morning 11.15 a.m. to 1.30 p.m.<br />
-          Evening 6.00 p.m. to 8.00 p.m.<br />
+          Evening 6.00 p.am. to 8.00 p.m.<br />
           Sunday - Closed
         </div>
         <br />
         <div class="grid-container">
-          {this.data.map(img => {
+          {this.data.map((img, index) => {
             return (
-              <figure style={img.styles} >
-                <img src={img.background} loading="lazy" style={this.mobileScreen ? img.styles : img.styles} />
+              <figure class={`grid-image-${index + 1}`} >
+                <picture>
+                  <source type="image/webp" media="(min-width: 501px)" srcSet={`${img.background}large.webp`}></source>
+                  <source type="image/webp" media="(max-width: 500px)" srcSet={`${img.background}small.webp`}></source>
+                  <source type="image/jpg" media="(min-width: 501px)" srcSet={`${img.background}large.jpg`}></source>
+                  <source type="image/jpg" media="(max-width: 500px)" srcSet={`${img.background}small.jpg`}></source>
+                  <img src={`${img.background}large.jpg`} loading="lazy" />
+                </picture>
               </figure>
             )
           })}

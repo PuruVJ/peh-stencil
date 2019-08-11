@@ -21,12 +21,12 @@ export class AppRoot {
             </section>
             <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
               <a class="icon-link" href="tel:9414065020">
-                <button class="mdc-icon-button">
+                <button name="Call" class="mdc-icon-button">
                   <img src="../../assets/icon/outline-call.svg" />
                 </button>
               </a>
               <a class="icon-link" href="mailto:vijaydrsandeep@yahoo.co.in">
-                <button class="mdc-icon-button">
+                <button name="Email" class="mdc-icon-button">
                   <img src="../../assets/icon/outline-email.svg" />
                 </button>
               </a>
