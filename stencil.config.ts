@@ -12,8 +12,8 @@ export const config: Config = {
       // comment the following line to disable service workers in production
       serviceWorker: {
         globPatterns: [
-          '**/*.{js,css,json,html,ico,png,jpg,jpeg}'
-        ]
+          '**/*.{js,css,json,html,ico,png,jpg,jpeg,woff2,woff}'
+        ],
       },
       baseUrl: 'https://purueyehospital.com/'
     }

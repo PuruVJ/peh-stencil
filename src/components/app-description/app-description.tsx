@@ -9,7 +9,7 @@ import { Component, h, State } from "@stencil/core";
 })
 export class AppDescription {
 
-  @State() data = [
+  /* @State() data = [
     {
       background: "../assets/gallery/9-",
     },
@@ -33,20 +33,30 @@ export class AppDescription {
     },
     {
       background: "../assets/gallery/10-",
-
     },
     {
       background: "../assets/gallery/4-",
-
     },
     {
       background: "../assets/gallery/5-",
-
     },
     {
       background: "../assets/gallery/9-",
     }
-  ];
+  ]; */
+  @State() data: string[] = [
+    '../assets/gallery/9-',
+    '../assets/gallery/1-',
+    '../assets/gallery/2-',
+    '../assets/gallery/3-',
+    '../assets/gallery/6-',
+    '../assets/gallery/7-',
+    '../assets/gallery/8-',
+    '../assets/gallery/10-',
+    '../assets/gallery/4-',
+    '../assets/gallery/5-',
+    '../assets/gallery/9-'
+  ]
 
   render() {
 
@@ -97,11 +107,17 @@ export class AppDescription {
             return (
               <figure class={`grid-image-${index + 1}`} >
                 <picture>
-                  <source type="image/webp" media="(min-width: 501px)" srcSet={`${img.background}large.webp`}></source>
+
+                  {/* <source type="image/webp" media="(min-width: 501px)" srcSet={`${img.background}large.webp`}></source>
                   <source type="image/webp" media="(max-width: 500px)" srcSet={`${img.background}small.webp`}></source>
                   <source type="image/jpg" media="(min-width: 501px)" srcSet={`${img.background}large.jpg`}></source>
                   <source type="image/jpg" media="(max-width: 500px)" srcSet={`${img.background}small.jpg`}></source>
-                  <img alt={`PEH Gallery image ${index + 1}`} src={`${img.background}large.jpg`} loading="lazy" />
+                  <img alt={`PEH Gallery image ${index + 1}`} src={`${img.background}large.jpg`} loading="lazy" /> */}
+                  <source type="image/webp" media="(min-width: 501px)" srcSet={`${img}large.webp`}></source>
+                  <source type="image/webp" media="(max-width: 500px)" srcSet={`${img}small.webp`}></source>
+                  <source type="image/jpg" media="(min-width: 501px)" srcSet={`${img}large.jpg`}></source>
+                  <source type="image/jpg" media="(max-width: 500px)" srcSet={`${img}small.jpg`}></source>
+                  <img alt={`PEH Gallery image ${index + 1}`} src={`${img}large.jpg`} loading="lazy" />
                 </picture>
               </figure>
             )
