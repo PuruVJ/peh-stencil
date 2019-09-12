@@ -8,6 +8,10 @@ import { Component, h, State } from "@stencil/core";
   shadow: true
 })
 export class AppDescription {
+  /* connectedCallback() {
+    const worker = new Worker('../../assets/worker.js')
+    console.log(worker);
+  } */
 
   /* @State() data = [
     {
