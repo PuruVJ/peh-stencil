@@ -8,46 +8,6 @@ import { Component, h, State } from "@stencil/core";
   shadow: true
 })
 export class AppDescription {
-  /* connectedCallback() {
-    const worker = new Worker('../../assets/worker.js')
-    console.log(worker);
-  } */
-
-  /* @State() data = [
-    {
-      background: "../assets/gallery/9-",
-    },
-    {
-      background: "../assets/gallery/1-",
-    },
-    {
-      background: "../assets/gallery/2-",
-    },
-    {
-      background: "../assets/gallery/3-",
-    },
-    {
-      background: "../assets/gallery/6-",
-    },
-    {
-      background: "../assets/gallery/7-",
-    },
-    {
-      background: "../assets/gallery/8-",
-    },
-    {
-      background: "../assets/gallery/10-",
-    },
-    {
-      background: "../assets/gallery/4-",
-    },
-    {
-      background: "../assets/gallery/5-",
-    },
-    {
-      background: "../assets/gallery/9-",
-    }
-  ]; */
   @State() data: string[] = [
     '../assets/gallery/9-',
     '../assets/gallery/1-',

@@ -1,6 +1,6 @@
 :host {
   width: 100%;
-  line-height: 52px;
+  
 }
 
 .app-description {
@@ -9,6 +9,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  line-height: 52px;
 }
 
 .description {
@@ -38,7 +39,7 @@ h6 {
 
 #timing {
   font-size: 1.1em;
-  line-height: px;
+  line-height: 40px;
 }
 
 .grid-container {
@@ -119,7 +120,11 @@ h6 {
     font-size: 1.4em;
   }
 
-  :host {
-    line-height: 40px;
+  .app-description {
+    line-height: 44px;
+  }
+
+  #timing {
+    line-height: 32px;
   }
 }
