@@ -1,5 +1,6 @@
-import { Component, h } from '@stencil/core';
-
+import { Component, h, Element, Build } from '@stencil/core';
+import { MDCTopAppBar } from "@material/top-app-bar";
+// import { MDCRipple } from "@material/ripple";
 
 @Component({
   tag: 'app-root',
@@ -10,6 +11,14 @@ import { Component, h } from '@stencil/core';
   shadow: true
 })
 export class AppRoot {
+  @Element() rootEl: HTMLElement;
+
+  componentDidLoad() {
+    if (Build.isBrowser) {
+      this.rootEl.shadowRoot.querySelectorAll('.mdc-top-app-bar').forEach(el => new MDCTopAppBar(el));
+      // this.rootEl.shadowRoot.querySelectorAll('.mdc-icon-button').forEach(el => new MDCRipple(el));
+    }
+  }
 
   render() {
     return (

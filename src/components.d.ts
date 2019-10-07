@@ -42,9 +42,9 @@ declare global {
 }
 
 declare namespace LocalJSX {
-  interface AppDescription extends JSXBase.HTMLAttributes<HTMLAppDescriptionElement> {}
-  interface AppHome extends JSXBase.HTMLAttributes<HTMLAppHomeElement> {}
-  interface AppRoot extends JSXBase.HTMLAttributes<HTMLAppRootElement> {}
+  interface AppDescription {}
+  interface AppHome {}
+  interface AppRoot {}
 
   interface IntrinsicElements {
     'app-description': AppDescription;
@@ -58,7 +58,11 @@ export { LocalJSX as JSX };
 
 declare module "@stencil/core" {
   export namespace JSX {
-    interface IntrinsicElements extends LocalJSX.IntrinsicElements {}
+    interface IntrinsicElements {
+      'app-description': LocalJSX.AppDescription & JSXBase.HTMLAttributes<HTMLAppDescriptionElement>;
+      'app-home': LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
+      'app-root': LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+    }
   }
 }
 

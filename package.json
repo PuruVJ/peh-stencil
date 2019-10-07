@@ -4,17 +4,16 @@
   "version": "0.0.1",
   "description": "Stencil App Starter",
   "scripts": {
-    "build": "stencil build",
+    "build": "stencil build --prod --prerender",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll"
   },
   "dependencies": {
     "@material/elevation": "^3.1.0",
-    "@material/icon-button": "^3.1.0",
-    "@material/top-app-bar": "^3.1.0",
-    "@stencil/core": "^1.4.0"
-    
+    "@material/icon-button": "^3.2.0",
+    "@material/top-app-bar": "^3.2.0",
+    "@stencil/core": "^1.5.4"
   },
   "license": "MIT",
   "devDependencies": {
