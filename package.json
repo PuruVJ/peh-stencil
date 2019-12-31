@@ -10,10 +10,8 @@
     "test.watch": "stencil test --spec --e2e --watchAll"
   },
   "dependencies": {
-    "@material/elevation": "^3.1.0",
-    "@material/icon-button": "^3.2.0",
-    "@material/top-app-bar": "^3.2.0",
-    "@stencil/core": "^1.7.1"
+    "@ionic/core": "^4.11.7",
+    "@stencil/core": "^1.8.3"
   },
   "license": "MIT",
   "devDependencies": {

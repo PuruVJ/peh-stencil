@@ -1,12 +1,14 @@
-/*
-  Global App CSS
-  ----------------------
-  Use this file for styles that should be applied to all components.
-  For example, "font-family" within the "body" selector is a CSS property
-  most apps will want applied to all components.
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/core/css/core.css";
 
-  Any global CSS variables should also be applied here.
-*/
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/core/css/normalize.css";
+@import "~@ionic/core/css/structure.css";
+
+// @import "~@ionic/core/css/typography.css";
+:root {
+  --ion-font-family: 'Quicksand';
+}
 
 body {
   margin: 0px;
@@ -18,27 +20,3 @@ body {
 * {
   -webkit-tap-highlight-color: transparent;
 }
-
-// /* farro-regular - latin */
-// @font-face {
-//   font-family: 'Farro';
-//   font-style: normal;
-//   font-weight: 400;
-//   src: local('Farro Regular'), local('Farro-Regular'),
-//     url('../assets/fonts/farro/farro-v1-latin-regular.woff2') format('woff2'),
-//     /* Chrome 26+, Opera 23+, Firefox 39+ */
-//     url('../assets/fonts/farro/farro-v1-latin-regular.woff') format('woff');
-//   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-// }
-
-// /* quicksand-regular - latin */
-// @font-face {
-//   font-family: 'Quicksand';
-//   font-style: normal;
-//   font-weight: 400;
-//   src: local(''),
-//     url('../assets/fonts/quicksand/quicksand-v13-latin-regular.woff2') format('woff2'),
-//     /* Chrome 26+, Opera 23+, Firefox 39+ */
-//     url('../assets/fonts/quicksand/quicksand-v13-latin-regular.woff') format('woff');
-//   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-// }

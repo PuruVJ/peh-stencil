@@ -1,6 +1,4 @@
-import { Component, h, Element, Build } from '@stencil/core';
-import { MDCTopAppBar } from "@material/top-app-bar";
-// import { MDCRipple } from "@material/ripple";
+import { Component, h } from '@stencil/core';
 
 @Component({
   tag: 'app-root',
@@ -11,47 +9,41 @@ import { MDCTopAppBar } from "@material/top-app-bar";
   shadow: true
 })
 export class AppRoot {
-  @Element() rootEl: HTMLElement;
-
-  componentDidLoad() {
-    if (Build.isBrowser) {
-      this.rootEl.shadowRoot.querySelectorAll('.mdc-top-app-bar').forEach(el => new MDCTopAppBar(el));
-      // this.rootEl.shadowRoot.querySelectorAll('.mdc-icon-button').forEach(el => new MDCRipple(el));
-    }
-  }
-
   render() {
     return (
-      <div>
-        <header class="mdc-top-app-bar mdc-elevation--z2">
-          <div class="mdc-top-app-bar__row">
-            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-              <img alt="PEH logo" id="site-logo" src="../../assets/icon.png" />
-            </section>
-            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
-              <a class="icon-link" href="tel:9414065020">
-                <button aria-label="Call" class="mdc-icon-button">
-                  <img alt="Call" src="../../assets/icon/outline-call.svg" />
-                </button>
-              </a>
-              <a class="icon-link" href="mailto:vijaydrsandeep@yahoo.co.in">
-                <button aria-label="Email" class="mdc-icon-button">
-                  <img alt="Email" src="../../assets/icon/outline-email.svg" />
-                </button>
-              </a>
-            </section>
-          </div>
-        </header>
 
-        <main>
+      <ion-app>
+        <ion-header>
+          <ion-toolbar>
+            <img slot="start" alt="PEH logo" id="site-logo" src="../../assets/icon.png" />
+            <ion-buttons slot="secondary">
+              <ion-button href="tel:9414065020">
+                <ion-icon slot="icon-only" src="../../assets/icon/outline-call.svg"></ion-icon>
+              </ion-button>
+              <ion-button href="mailto:vijaydrsandeep@yahoo.co.in" target="_blank">
+                <ion-icon slot="icon-only" src="../../assets/icon/outline-email.svg"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+
+          </ion-toolbar>
+        </ion-header>
+
+        <ion-content class="ion-padding">
           <app-home></app-home>
-        </main>
-
-
-        <footer >
-          Created by <a href="https://twitter.com/PuruVijay14">Puru Vijay</a>
-        </footer>
-      </div>
+        </ion-content>
+        <br />
+        <br />
+        <br />
+        <br />
+        <ion-footer>
+          <ion-toolbar>
+            Created by <a href="https://twitter.com/PuruVijay14">Puru Vijay</a>
+          </ion-toolbar>
+        </ion-footer>
+        <br />
+        <br />
+        <br />
+      </ion-app>
     );
   }
 }

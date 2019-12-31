@@ -37,8 +37,7 @@ export class AppDescription {
             <br />
             <br />
             It has two locations: one at <a href="https://goo.gl/maps/1zsRFLb2nvz">Mansarovar</a> and other at <a href="https://goo.gl/maps/W4RbVcZMWzw">Durgapura</a>. The out patient department of each one is well equipped with latest state of the art equipments. Operation theatre of Puru Eye Hospital at Mansarovar is well equipped with latest phaco emulsification machine, operating microscope along with all necessary equipments.
-
-<br />
+            <br />
             <br />
             Dr Sandeep Vijay is specially trained in <b>Micro Incision surgeries, Lasik surgeries & IOL surgeries </b>.At Puru Eye Hospital <b>Minimal Invasive Cataract Surgeries using Multifocal, Toric & premium IOLs</b> are performed routinely. Besides this, he also performs <b>Glaucoma, Squint, Pterygium & Oculoplastic Surgeries</b>.
             <br />
@@ -71,12 +70,6 @@ export class AppDescription {
             return (
               <figure class={`grid-image-${index + 1}`} >
                 <picture>
-
-                  {/* <source type="image/webp" media="(min-width: 501px)" srcSet={`${img.background}large.webp`}></source>
-                  <source type="image/webp" media="(max-width: 500px)" srcSet={`${img.background}small.webp`}></source>
-                  <source type="image/jpg" media="(min-width: 501px)" srcSet={`${img.background}large.jpg`}></source>
-                  <source type="image/jpg" media="(max-width: 500px)" srcSet={`${img.background}small.jpg`}></source>
-                  <img alt={`PEH Gallery image ${index + 1}`} src={`${img.background}large.jpg`} loading="lazy" /> */}
                   <source type="image/webp" media="(min-width: 501px)" srcSet={`${img}large.webp`}></source>
                   <source type="image/webp" media="(max-width: 500px)" srcSet={`${img}small.webp`}></source>
                   <source type="image/jpg" media="(min-width: 501px)" srcSet={`${img}large.jpg`}></source>

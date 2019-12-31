@@ -16,11 +16,8 @@ export class AppHome {
           <source type="image/jpg" media="(min-width: 501px)" srcSet="../../assets/banner-large.jpg"></source>
           <source type="image/jpg" media="(max-width: 500px)" srcSet="../../assets/banner-small.jpg"></source>
           <img alt="Puru Eye Hospital front view" id="banner" src="../../assets/banner.jpg" />
-        </picture>
-        <br />
-        <br />
+        </picture>     
         <app-description></app-description>
-
       </div>
     );
   }
