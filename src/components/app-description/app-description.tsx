@@ -1,4 +1,4 @@
-import { Component, h, State } from "@stencil/core";
+import { Component, h } from "@stencil/core";
 @Component({
   tag: 'app-description',
   styleUrls: [
@@ -8,7 +8,7 @@ import { Component, h, State } from "@stencil/core";
   shadow: true
 })
 export class AppDescription {
-  @State() data: string[] = [
+  data: string[] = [
     '../assets/gallery/9-',
     '../assets/gallery/1-',
     '../assets/gallery/2-',
