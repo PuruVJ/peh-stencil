@@ -7,16 +7,31 @@
 
 // @import "~@ionic/core/css/typography.css";
 :root {
-  --ion-font-family: 'Quicksand';
+  --ion-font-family: "Quicksand";
 }
 
 body {
   margin: 0px;
   padding: 0px;
-  font-family: "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
 }
 
 * {
   -webkit-tap-highlight-color: transparent;
+}
+
+a:not(.icon-link) {
+  color: #585858;
+  text-decoration: none;
+  border-spacing: 4px;
+  border-bottom: 3px dotted #585858;
+  transition: all 0.5ms ease-in;
+
+  &:hover {
+    color: #000;
+    border-spacing: 4px;
+    border-bottom: 3px dotted #000;
+  }
 }
