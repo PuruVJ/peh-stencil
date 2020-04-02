@@ -6,19 +6,7 @@ import { Component, h } from "@stencil/core";
   scoped: true
 })
 export class AppDescription {
-  data: string[] = [
-    "../assets/gallery/9-",
-    "../assets/gallery/1-",
-    "../assets/gallery/2-",
-    "../assets/gallery/3-",
-    "../assets/gallery/6-",
-    "../assets/gallery/7-",
-    "../assets/gallery/8-",
-    "../assets/gallery/10-",
-    "../assets/gallery/4-",
-    "../assets/gallery/5-",
-    "../assets/gallery/9-"
-  ];
+  data: number[] = [9, 1, 2, 3, 6, 7, 8, 10, 4, 5, 9];
 
   render() {
     return (
@@ -74,22 +62,23 @@ export class AppDescription {
         <div id="timing">
           <h1>Addresses & Timings</h1>
           <h3>Puru Eye Hospital, Mansarovar</h3>
-          Morning 9.00 a.m. to 10.45 a.m.
+          Morning 9.30 a.m. to 10.30 a.m.
           <br />
-          Evening 4.00 p.m. to 5.30 p.m.
+          Evening 4.30 p.m. to 5.30 p.m.
           <br />
-          Sunday- 09.00-11.30 (by appointment)
+          Sunday - 09.30 a.m. to 11.30 a.m.
           <br />
           <h3>Puru Eye Hospital, Durgapura</h3>
           Morning 11.15 a.m. to 1.30 p.m.
           <br />
-          Evening 6.00 p.am. to 8.00 p.m.
+          Evening 6.00 p.m. to 8.00 p.m.
           <br />
           Sunday - Closed
         </div>
         <br />
         <div class="grid-container">
-          {this.data.map((img, index) => {
+          {this.data.map((imgNum, index) => {
+            const img = `../assets/gallery/${imgNum}-`;
             return (
               <figure class={`grid-image-${index + 1}`}>
                 <picture>

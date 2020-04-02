@@ -1,26 +1,72 @@
-// #site-logo {
-//   height: 65px;
-// }
+:host {
+  display: block;
+}
 
-@media only screen and (max-width: 500px) {
-  #site-logo {
-    height: 48px;
+main {
+  margin-top: 70px;
+}
+
+header {
+  top: 0;
+  max-height: max-content;
+  width: 100%;
+  position: fixed;
+  background: white;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  padding: 0 8px 0 8px;
+  box-shadow: 0px 1.45px rgba(34, 34, 34, 0.2);
+  transition: all 150ms ease-in;
+
+  &.shadow {
+    box-shadow: 0px 1px 5px 0px #ccc;
+    border-bottom: none !important;
   }
 
-  ion-header ion-toolbar {
-    --min-height: 56px !important;
-    --padding-start: 7px;
-    --padding-top: 5px;
-    --padding-bottom: 5px;
+  #logo {
+    position: relative;
+    padding-top: 2px;
+    img {
+      max-height: 65px;
+    }
+  }
+
+  #tabs {
+    height: 100%;
+    padding-right: 1em;
+    display: flex;
+    align-items: center;
+
+    .tab {
+      cursor: pointer;
+      height: 100%;
+      padding: 0 0.5em;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0.2em;
+      transition: all 100ms ease-in;
+      user-select: none;
+      letter-spacing: 0.05em;
+
+      &:hover {
+        box-shadow: inset 0px -2px black;
+      }
+    }
   }
 }
 
+@media screen and (max-width: 500px) {
+  #logo img {
+    max-height: 55px !important;
+  }
 
-ion-header ion-toolbar {
-  --background: white;
-  // --min-height: 70.8px;
-  --padding-start: 12px;
-  --padding-top: 1px;
-  --padding-bottom: 1px;
-  --color: hsla(0, 0%, 0%, 0.87);
+  main {
+    margin-top: 59px !important;
+  }
+}
+
+footer {
+  padding: 1em 1em;
 }

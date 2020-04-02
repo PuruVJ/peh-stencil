@@ -4,16 +4,16 @@
   "version": "2.4.0",
   "description": "Puru eye hospital",
   "scripts": {
-    "build": "stencil build --prod --prerender --next && terser www/sw.js --compress -o www/sw.js",
-    "start": "stencil build --dev --watch --serve --next --no-open",
+    "build": "stencil build --prod --prerender && terser www/sw.js --compress -o www/sw.js",
+    "start": "stencil build --dev --watch --serve --no-open",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "deploy": "firebase deploy",
     "build:deploy": "npm run build && npm run deploy"
   },
   "dependencies": {
-    "@ionic/core": "5.0.5",
-    "@stencil/core": "^1.9.2"
+    "@mdi/js": "^5.0.45",
+    "@stencil/core": "^1.12.0"
   },
   "license": "MIT",
   "devDependencies": {

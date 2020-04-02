@@ -1,15 +1,3 @@
-/* Core CSS required for Ionic components to work properly */
-@import "~@ionic/core/css/core.css";
-
-/* Basic CSS for apps built with Ionic */
-@import "~@ionic/core/css/normalize.css";
-@import "~@ionic/core/css/structure.css";
-
-// @import "~@ionic/core/css/typography.css";
-:root {
-  --ion-font-family: "Quicksand";
-}
-
 body {
   margin: 0px;
   padding: 0px;
@@ -21,6 +9,17 @@ body {
 * {
   -webkit-tap-highlight-color: transparent;
 }
+
+::selection {
+  background-color: rgb(189, 189, 189);
+}
+
+a.icon-link {
+  color: black;
+  border-bottom: none;
+  text-decoration: none !important;
+}
+
 
 a:not(.icon-link) {
   color: #585858;
