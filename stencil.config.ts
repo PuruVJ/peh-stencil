@@ -25,4 +25,16 @@ export const config: Config = {
       includePaths: ['./node_modules']
     })
   ],
+  buildEs5: false,
+  extras: {
+    appendChildSlotFix: false,
+    cloneNodeFix: false,
+    cssVarsShim: false,
+    dynamicImportShim: false,
+    lifecycleDOMEvents: false,
+    safari10: false,
+    scriptDataOpts: false,
+    shadowDomShim: false,
+    slotChildNodesFix: false
+  }
 };
