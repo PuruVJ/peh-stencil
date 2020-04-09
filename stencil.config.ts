@@ -1,29 +1,29 @@
-import { Config } from '@stencil/core';
+import { Config } from "@stencil/core";
 import { sass } from "@stencil/sass";
 
 // https://stenciljs.com/docs/config
 
 export const config: Config = {
-  globalStyle: 'src/global/app.scss',
-  globalScript: 'src/global/app.ts',
+  globalStyle: "src/global/app.scss",
+  globalScript: "src/global/app.ts",
   outputTargets: [
     {
-      type: 'www',
+      type: "www",
       // comment the following line to disable service workers in production
       serviceWorker: {
         // globPatterns: [
         //   '**/*.{js,css,json,html,ico,png,jpg,jpeg,woff2,woff,svg}'
         // ],
-        swSrc: './src/sw.js'
+        swSrc: "./src/sw.js",
       },
-      baseUrl: 'https://purueyehospital.com/'
-    }
+      baseUrl: "https://purueyehospital.com/",
+    },
   ],
   enableCache: false,
   plugins: [
     sass({
-      includePaths: ['./node_modules']
-    })
+      includePaths: ["./node_modules"],
+    }),
   ],
   buildEs5: false,
   extras: {
@@ -35,6 +35,6 @@ export const config: Config = {
     safari10: false,
     scriptDataOpts: false,
     shadowDomShim: false,
-    slotChildNodesFix: false
-  }
+    slotChildNodesFix: false,
+  },
 };

@@ -14,12 +14,15 @@
   "dependencies": {
     "@mdi/js": "^5.0.45",
     "@stencil/core": "^1.12.3",
+    "dominant-color": "0.0.1",
+    "lazysizes": "^5.2.0",
     "lozad": "^1.14.0"
   },
   "license": "MIT",
   "devDependencies": {
     "@stencil/sass": "^1.1.1",
     "imagemin": "^7.0.0",
+    "imagemin-mozjpeg": "^8.0.0",
     "imagemin-webp": "^5.1.0",
     "terser": "^4.6.3",
     "workbox-build": "4.3.1"
