@@ -44,7 +44,7 @@ export class AppRoot implements ComponentInterface {
         </main>
         <footer>
           &nbsp; Created by{" "}
-          <a href="https://twitter.com/PuruVijay14">Puru Vijay</a>
+          <a href="https://twitter.com/puruvjdev">Puru Vijay</a>
         </footer>
       </div>
     );
