@@ -20,7 +20,7 @@
     <link href="/build/app.css" rel="stylesheet" />
 
     <link rel="apple-touch-icon" href="/assets/icon.png" />
-    <link rel="icon" type="image/x-icon" href="/assets/icon.png" />
+    <link rel="icon" type="image/x-icon" href="/assets/icon/favicon.png" />
     <link rel="manifest" href="./manifest.json" />
 
     <link
@@ -46,6 +46,19 @@
       defer
       src="https://www.googletagmanager.com/gtag/js?id=UA-112981632-1"
     ></script>
+    <script defer src="assets/lazysizes.min.js"></script>
+    <script>
+      document.addEventListener("lazybeforeunveil", (e) => {
+        const target = e.target;
+        // It's number
+        const num = target.dataset.gallery;
+
+        // Get the figure
+        const figure = document.querySelector(`figure.grid-image-${num}`);
+
+        figure.style.paddingTop = "0px";
+      });
+    </script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {

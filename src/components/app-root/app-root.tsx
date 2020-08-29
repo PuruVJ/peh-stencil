@@ -4,7 +4,7 @@ import { Component, ComponentInterface, h, State } from "@stencil/core";
   tag: "app-root",
   styleUrl: "app-root.scss",
   shadow: false,
-  scoped: true
+  scoped: true,
 })
 export class AppRoot implements ComponentInterface {
   @State() shadow: boolean = false;
@@ -16,9 +16,9 @@ export class AppRoot implements ComponentInterface {
   render() {
     return (
       <div id="root-container">
-        <header class={{ shadow: this.shadow }}>
+        <header class={{ shadow: true }}>
           <div id="logo">
-            <img src="../../assets/icon.png" alt="PEH Logo" />
+            <img src="../../assets/peh-logo.svg" alt="PEH Logo" />
           </div>
           <div id="empty-space"></div>
           <div id="tabs">

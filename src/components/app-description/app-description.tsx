@@ -1,4 +1,4 @@
-import { Component, h, ComponentInterface, Build } from "@stencil/core";
+import { Component, ComponentInterface, h } from "@stencil/core";
 
 interface Image {
   num: number;
@@ -13,25 +13,6 @@ interface Image {
   scoped: true,
 })
 export class AppDescription implements ComponentInterface {
-  async componentDidLoad() {
-    if (Build.isBrowser) {
-      // Lazy load lazysizes
-      await import("lazysizes");
-
-      document.addEventListener("lazybeforeunveil", (e) => {
-        const target = e.target as HTMLImageElement;
-        // It's number
-        const num = target.dataset.gallery;
-
-        // Get the figure
-        const figure = document.querySelector(
-          `figure.grid-image-${num}`
-        ) as HTMLElement;
-
-        figure.style.paddingTop = "0px";
-      });
-    }
-  }
   // data: number[] = [9, 1, 2, 3, 6, 7, 8, 10, 4, 5, 9];
   data: Image[] = [
     {
@@ -162,7 +143,6 @@ export class AppDescription implements ComponentInterface {
         <div class="grid-container">
           {this.data.map((img, index) => {
             const imgURL = `../../assets/gallery/${img.num}-`;
-            // const placeholderImg = `../../assets/gallery-placeholder/${img.nu}-large.jpg`;
             return (
               <figure
                 class={`grid-image-${index + 1}`}
