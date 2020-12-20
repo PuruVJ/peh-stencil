@@ -129,7 +129,7 @@ export class AppDescription implements ComponentInterface {
           <h3>Puru Eye Hospital, Mansarovar</h3>
           9 a.m. to 1 p.m.
           <br />
-          Sunday - 09.30 a.m. to 11.30 a.m.
+          Sunday - 9.30 a.m. to 11.30 a.m.
           <br />
           <h3>Puru Eye Hospital, Durgapura</h3>
           5 p.m. to 7 p.m.
