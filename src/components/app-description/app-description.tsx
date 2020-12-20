@@ -88,11 +88,11 @@ export class AppDescription implements ComponentInterface {
             <br />
             <br />
             It has two locations: one at{" "}
-            <a href="https://goo.gl/maps/1zsRFLb2nvz">Mansarovar</a> and other
-            at <a href="https://goo.gl/maps/W4RbVcZMWzw">Durgapura</a>. The out
-            patient department of each one is well equipped with latest state of
-            the art equipments. Operation theatre of Puru Eye Hospital at
-            Mansarovar is well equipped with latest phaco emulsification
+            <a href="https://goo.gl/maps/X9juPNBUfEuirnLNA">Mansarovar</a> and
+            other at <a href="https://goo.gl/maps/W4RbVcZMWzw">Durgapura</a>.
+            The out patient department of each one is well equipped with latest
+            state of the art equipments. Operation theatre of Puru Eye Hospital
+            at Mansarovar is well equipped with latest phaco emulsification
             machine, operating microscope along with all necessary equipments.
             <br />
             <br />
