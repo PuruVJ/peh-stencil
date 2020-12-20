@@ -83,8 +83,8 @@ export class AppDescription implements ComponentInterface {
             well recognized name in eye care services in Jaipur.
             <br />
             <br />
-            This is owned by <b>Dr Sandeep Vijay (M.S.)</b> who has a vast
-            experience of more than 25 years in advance eye care.
+            This is owned by <b>Dr Sandeep Vijay (M.S.)</b> who has more than 25
+            years of experience in advance eye care.
             <br />
             <br />
             It has two locations: one at{" "}
