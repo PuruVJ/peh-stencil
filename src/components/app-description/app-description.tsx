@@ -84,7 +84,7 @@ export class AppDescription implements ComponentInterface {
             <br />
             <br />
             This is owned by <b>Dr Sandeep Vijay (M.S.)</b> who has a vast
-            experience of 25 years in advance eye care.
+            experience of more than 25 years in advance eye care.
             <br />
             <br />
             It has two locations: one at{" "}
