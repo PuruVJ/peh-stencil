@@ -12,7 +12,10 @@ export class NewLocation {
         Puru Eye Hospital, Mansarovar is moving to a new location{" "}
       </span>{" "}
       <br />
-      Address: <b>76/7, Shipra Path, Opp Landscape Park, Mansarovar</b> <br />
+      Address: <b>
+        76/7, Shipra Path, Opp Landscape Park, Mansarovar, Jaipur
+      </b>{" "}
+      <br />
       <a
         href="https://goo.gl/maps/X9juPNBUfEuirnLNA"
         rel="noopener noreferrer"
