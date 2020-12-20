@@ -75,6 +75,7 @@ export class AppDescription implements ComponentInterface {
   render() {
     return (
       <div class="app-description">
+        <new-location></new-location>
         <h1>ABOUT</h1>
         <div class="description">
           <span>
