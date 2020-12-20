@@ -58,6 +58,13 @@ header {
   }
 }
 
+@supports (backdrop-filter: blur(20px)) {
+  header {
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+  }
+}
+
 @media screen and (max-width: 500px) {
   #logo img {
     max-height: 55px !important;

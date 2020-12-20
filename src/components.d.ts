@@ -12,6 +12,8 @@ export namespace Components {
     }
     interface AppRoot {
     }
+    interface NewLocation {
+    }
 }
 declare global {
     interface HTMLAppDescriptionElement extends Components.AppDescription, HTMLStencilElement {
@@ -32,10 +34,17 @@ declare global {
         prototype: HTMLAppRootElement;
         new (): HTMLAppRootElement;
     };
+    interface HTMLNewLocationElement extends Components.NewLocation, HTMLStencilElement {
+    }
+    var HTMLNewLocationElement: {
+        prototype: HTMLNewLocationElement;
+        new (): HTMLNewLocationElement;
+    };
     interface HTMLElementTagNameMap {
         "app-description": HTMLAppDescriptionElement;
         "app-home": HTMLAppHomeElement;
         "app-root": HTMLAppRootElement;
+        "new-location": HTMLNewLocationElement;
     }
 }
 declare namespace LocalJSX {
@@ -45,10 +54,13 @@ declare namespace LocalJSX {
     }
     interface AppRoot {
     }
+    interface NewLocation {
+    }
     interface IntrinsicElements {
         "app-description": AppDescription;
         "app-home": AppHome;
         "app-root": AppRoot;
+        "new-location": NewLocation;
     }
 }
 export { LocalJSX as JSX };
@@ -58,6 +70,7 @@ declare module "@stencil/core" {
             "app-description": LocalJSX.AppDescription & JSXBase.HTMLAttributes<HTMLAppDescriptionElement>;
             "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+            "new-location": LocalJSX.NewLocation & JSXBase.HTMLAttributes<HTMLNewLocationElement>;
         }
     }
 }

@@ -4,7 +4,7 @@ import { Component, h } from "@stencil/core";
   tag: "app-home",
   styleUrl: "app-home.scss",
   shadow: false,
-  scoped: true
+  scoped: true,
 })
 export class AppHome {
   render() {
@@ -37,6 +37,7 @@ export class AppHome {
             src="../../assets/banner.jpg"
           />
         </picture>
+
         <app-description></app-description>
       </div>
     );

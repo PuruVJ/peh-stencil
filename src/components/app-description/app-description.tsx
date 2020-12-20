@@ -75,6 +75,7 @@ export class AppDescription implements ComponentInterface {
   render() {
     return (
       <div class="app-description">
+        <new-location></new-location>
         <h1>ABOUT</h1>
         <div class="description">
           <span>
@@ -82,8 +83,8 @@ export class AppDescription implements ComponentInterface {
             well recognized name in eye care services in Jaipur.
             <br />
             <br />
-            This is owned by <b>Dr Sandeep Vijay (M.S.)</b> who has a vast
-            experience of 25 years in advance eye care.
+            This is owned by <b>Dr Sandeep Vijay (M.S.)</b> who has more than 28
+            years of experience in advance eye care.
             <br />
             <br />
             It has two locations: one at{" "}
@@ -128,7 +129,7 @@ export class AppDescription implements ComponentInterface {
           <h3>Puru Eye Hospital, Mansarovar</h3>
           9 a.m. to 1 p.m.
           <br />
-          Sunday - 09.30 a.m. to 11.30 a.m.
+          Sunday - 9.30 a.m. to 11.30 a.m.
           <br />
           <h3>Puru Eye Hospital, Durgapura</h3>
           5 p.m. to 7 p.m.
