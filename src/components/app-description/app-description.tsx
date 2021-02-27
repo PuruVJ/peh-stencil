@@ -82,11 +82,11 @@ export class AppDescription implements ComponentInterface {
               const imgURL = `../../assets/gallery/${img}`;
               return (
                 <figure
-                // style={{
-                //   background: `#8400ff`,
-                //   borderRadius: "0.75rem",
-                //   paddingTop: "75%",
-                // }}
+                  style={{
+                    background: `#8400ff`,
+                    borderRadius: "0.75rem",
+                    paddingTop: "75%",
+                  }}
                 >
                   <picture>
                     <img

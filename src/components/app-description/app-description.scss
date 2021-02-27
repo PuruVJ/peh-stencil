@@ -60,6 +60,8 @@ h6 {
     margin: 0rem;
     min-height: 1rem !important;
     display: block;
+
+    position: relative;
   }
 
   img {
@@ -67,7 +69,9 @@ h6 {
     width: fit-content;
     object-fit: cover;
     object-position: center;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     margin-top: 0;
     margin-left: 0;
     width: 100%;
