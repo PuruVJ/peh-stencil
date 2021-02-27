@@ -18,7 +18,7 @@ export class AppRoot implements ComponentInterface {
       <div id="root-container">
         <header class={{ shadow: true }}>
           <div id="logo">
-            <img src="../../assets/peh-logo.svg" alt="PEH Logo" />
+            <img src="../../assets/PEH-logo.png" alt="PEH Logo" />
           </div>
           <div id="empty-space"></div>
           <div id="tabs">
