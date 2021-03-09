@@ -25,11 +25,11 @@ export class AppDescription implements ComponentInterface {
             <br />
             <br />
             It has two locations: one at{" "}
-            <a href="https://goo.gl/maps/1zsRFLb2nvz">Mansarovar</a> and other
-            at <a href="https://goo.gl/maps/W4RbVcZMWzw">Durgapura</a>. The out
-            patient department of each one is well equipped with latest state of
-            the art equipments. Operation theatre of Puru Eye Hospital at
-            Mansarovar is well equipped with latest phaco emulsification
+            <a href="https://goo.gl/maps/yRse8gZyjbRL5BTt9">Mansarovar</a> and
+            other at <a href="https://goo.gl/maps/W4RbVcZMWzw">Durgapura</a>.
+            The out patient department of each one is well equipped with latest
+            state of the art equipments. Operation theatre of Puru Eye Hospital
+            at Mansarovar is well equipped with latest phaco emulsification
             machine, operating microscope along with all necessary equipments.
             <br />
             <br />
@@ -64,12 +64,9 @@ export class AppDescription implements ComponentInterface {
         <div id="timing">
           <h1>Addresses & Timings</h1>
           <h3>Puru Eye Hospital, Mansarovar</h3>
-          9 a.m. to 1 p.m.
-          <br />
-          Sunday - 9.30 a.m. to 11.30 a.m.
-          <br />
+          <b>Mon - Sun</b>: 9 a.m. to 1 p.m.
           <h3>Puru Eye Hospital, Durgapura</h3>
-          5 p.m. to 7 p.m.
+          <b>Mon - Sat</b>5 p.m. to 7 p.m.
           <br />
           Sunday - Closed
         </div>
