@@ -66,7 +66,7 @@ export class AppDescription implements ComponentInterface {
           <h3>Puru Eye Hospital, Mansarovar</h3>
           <b>Mon - Sun</b>: 9 a.m. to 1 p.m.
           <h3>Puru Eye Hospital, Durgapura</h3>
-          <b>Mon - Sat</b>5 p.m. to 7 p.m.
+          <b>Mon - Sat</b>5 p.m. to 7:30 p.m.
           <br />
           Sunday - Closed
         </div>
